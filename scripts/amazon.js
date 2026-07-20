@@ -1,3 +1,6 @@
+import {cart} from '../data/cart.js';
+import {products} from '../data/products.js';
+
 let productsHTML = '';
 
 products.forEach((products)=>{
@@ -76,7 +79,14 @@ button.addEventListener('click', ()=>{
         });
   }
 
-  
+  let cartQuantity = 0;
+
+  cart.forEach((item)=>{
+    cartQuantity += item.quantity;
+  })
+  document.querySelector('.cart-quantity').innerHTML = cartQuantity;
+  console.log(cartQuantity);
     console.log(cart);
 })
-})
+});
+
