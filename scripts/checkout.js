@@ -5,6 +5,12 @@ let cartSummaryHTML = '';
 
 cart.forEach((cartItem)=>{
 
+  let quantity = cartItem.quantity;
+
+  const totalCartQuantity = document.querySelector('.item-quantity');
+
+  totalCartQuantity.innerHTML = `${quantity} Items`;
+
   const productId = cartItem.productId;
 
   let matchingProduct;
