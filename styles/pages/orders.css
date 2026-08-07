@@ -25,6 +25,12 @@
   row-gap: 50px;
 }
 
+.order-placed-message {
+  color: rgb(0, 118, 0);
+  font-weight: 500;
+  margin-bottom: 18px;
+}
+
 .order-header {
   background-color: rgb(240, 242, 242);
   border: 1px solid rgb(213, 217, 217);
@@ -92,23 +98,30 @@
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
 
+  display: flex;
+  flex-direction: column;
+  row-gap: 60px;
+}
+
+.order-product-row {
   display: grid;
   grid-template-columns: 110px 1fr 220px;
   column-gap: 35px;
-  row-gap: 60px;
   align-items: center;
 }
 
 @media (max-width: 800px) {
-  .order-details-grid {
+  .order-product-row {
     grid-template-columns: 110px 1fr;
-    row-gap: 0;
-    padding-bottom: 8px;
   }
 }
 
 @media (max-width: 450px) {
   .order-details-grid {
+    padding-bottom: 8px;
+  }
+
+  .order-product-row {
     grid-template-columns: 1fr;
   }
 }
@@ -156,6 +169,10 @@
 }
 
 .track-package-button {
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: center;
+  text-decoration: none;
   width: 100%;
   font-size: 15px;
   padding: 8px;

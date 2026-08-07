@@ -119,6 +119,14 @@
   margin-left: 3px;
 }
 
+.delete-quantity-link {
+  margin-left: 10px;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-size: inherit;
+}
+
 @media (max-width: 1000px) {
   .delivery-options {
     /* grid-column: 1 means this element will be placed
@@ -152,12 +160,14 @@
 }
 
 .delivery-option-date {
+  display: block;
   color: rgb(0, 118, 0);
   font-weight: 500;
   margin-bottom: 3px;
 }
 
 .delivery-option-price {
+  display: block;
   color: rgb(120, 120, 120);
   font-size: 15px;
 }
